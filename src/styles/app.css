@@ -43,7 +43,8 @@ a:hover {
   grid-area: footer;
   background-color: rgb(60, 120, 122);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+
   padding: 0.5rem;
 }

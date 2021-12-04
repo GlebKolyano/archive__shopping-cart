@@ -1,8 +1,16 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect } from 'react';
 import "./styles/app.css"
 
 
 function App() {
+  useEffect(() => {
+    fetchBooks()
+  }, [])
+  async function fetchBooks() {
+    const responce = await axios.get('https://www.googleapis.com/books/v1/volumes?q=isbn:0771595158')
+    console.log(responce.data)
+  }
   return (
     <div className="app-wrapper">
       <header className="header"><a href="/">Shopping cart project</a></header>

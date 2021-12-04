@@ -1,0 +1,76 @@
+{
+  "products": [
+    {
+    "_id": "book1",
+    "image": "/images/book1.jpg",
+    "title": "Book #1",
+    "description": "something about book",
+    "availableCovers": ["hardCover", "papyCover"],
+    "price": 7.25
+  },
+   {
+    "_id": "book2",
+    "image": "/images/book2.jpg",
+    "title": "Book #2",
+    "description": "something about book",
+    "availableCovers": ["hardCover", "papyCover"],
+    "price": 7.15
+  },
+   {
+    "_id": "book3",
+    "image": "/images/book3.jpg",
+    "title": "Book #3",
+    "description": "something about book",
+    "availableCovers": ["hardCover", "papyCover"],
+    "price": 7.55
+  },
+   {
+    "_id": "book4",
+    "image": "/images/book4.jpg",
+    "title": "Book #4",
+    "description": "something about book",
+    "availableCovers": ["hardCover", "papyCover"],
+    "price": 7
+  },
+   {
+    "_id": "book5",
+    "image": "/images/book5.jpg",
+    "title": "Book #5",
+    "description": "something about book",
+    "availableCovers": ["hardCover", "papyCover"],
+    "price": 7.35
+  },
+   {
+    "_id": "book6",
+    "image": "/images/book6.jpg",
+    "title": "Book #6",
+    "description": "something about book",
+    "availableCovers": ["hardCover", "papyCover"],
+    "price": 7.25
+  },
+   {
+    "_id": "book7",
+    "image": "/images/book7.jpg",
+    "title": "Book #7",
+    "description": "something about book",
+    "availableCovers": ["hardCover", "papyCover"],
+    "price": 7.80
+  },
+   {
+    "_id": "book8",
+    "image": "/images/book8.jpg",
+    "title": "Book #8",
+    "description": "something about book",
+    "availableCovers": ["hardCover", "papyCover"],
+    "price": 7.20
+  },
+   {
+    "_id": "book9",
+    "image": "/images/book9.jpg",
+    "title": "Book #9",
+    "description": "something about book",
+    "availableCovers": ["hardCover", "papyCover"],
+    "price": 6.95
+  }
+]
+}
