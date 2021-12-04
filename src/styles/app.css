@@ -1,0 +1,21 @@
+/* default settings */
+html {
+  font-size: 18px;
+
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: white;
+  background-color: rgb(50, 50, 63);
+}
+
+/* main part site */
+.app-wrapper {
+}
+.header {
+}
+.footer {
+}
+.main {
+}
