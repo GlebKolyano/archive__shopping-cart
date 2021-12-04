@@ -15,8 +15,8 @@ a {
   text-decoration: none;
   color: white;
 }
-a:hover {
-  color: rgb(101, 204, 182);
+li {
+  list-style: none;
 }
 /* main part site */
 .app-wrapper {
@@ -51,11 +51,13 @@ a:hover {
 .main__wrapper {
   height: 100%;
   display: flex;
+  color: rgb(29, 29, 29);
+  justify-content: center;
+  column-gap: 20px;
 }
 .main__content {
   flex: 0 1 80rem;
   background-color: white;
-  margin-right: 1rem;
   border-radius: 0.5rem;
 }
 
@@ -63,4 +65,22 @@ a:hover {
   flex: 0 1 20rem;
   background-color: white;
   border-radius: 0.5rem;
+}
+
+.books__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+}
+.book__item {
+  flex: 0 1 300px;
+  border: 1px solid #000;
+}
+.book__item > a {
+  color: rgb(39, 39, 39);
+}
+.book__cover {
+  width: 100%;
+  height: 100%;
 }
