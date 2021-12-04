@@ -45,6 +45,22 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-
   padding: 0.5rem;
+}
+/* main block */
+.main__wrapper {
+  height: 100%;
+  display: flex;
+}
+.main__content {
+  flex: 0 1 80rem;
+  background-color: white;
+  margin-right: 1rem;
+  border-radius: 0.5rem;
+}
+
+.main__cart {
+  flex: 0 1 20rem;
+  background-color: white;
+  border-radius: 0.5rem;
 }
