@@ -5,7 +5,7 @@
     "image": "/images/book1.jpg",
     "title": "1984",
     "description": "something about book",
-    "availableCovers": ["hardCover", "papyCover"],
+    "cover": "papercover",
     "price": 7.25
   },
    {
@@ -13,7 +13,7 @@
     "image": "/images/book2.jpg",
     "title": "Убить пересмешника",
     "description": "something about book",
-    "availableCovers": ["hardCover", "papyCover"],
+    "cover": "hardcover",
     "price": 7.15
   },
    {
@@ -21,7 +21,7 @@
     "image": "/images/book3.jpg",
     "title": "Грозовой перевал",
     "description": "something about book",
-    "availableCovers": ["hardCover", "papyCover"],
+    "cover": "papercover",
     "price": 7.55
   },
    {
@@ -29,7 +29,7 @@
     "image": "/images/book4.jpg",
     "title": "О дивный новый мир",
     "description": "something about book",
-    "availableCovers": ["hardCover", "papyCover"],
+    "cover": "papercover",
     "price": 7.90
   },
    {
@@ -37,7 +37,7 @@
     "image": "/images/book5.jpg",
     "title": "Велики Гэтсби",
     "description": "something about book",
-    "availableCovers": ["hardCover", "papyCover"],
+    "cover": "papercover",
     "price": 7.35
   },
    {
@@ -45,7 +45,7 @@
     "image": "/images/book6.jpg",
     "title": "Портрет Дориана Грея",
     "description": "something about book",
-    "availableCovers": ["hardCover", "papyCover"],
+    "cover": "papercover",
     "price": 10.25
   },
    {
@@ -53,7 +53,7 @@
     "image": "/images/book7.jpg",
     "title": "Повелитель мух",
     "description": "something about book",
-    "availableCovers": ["hardCover", "papyCover"],
+    "cover": ["hardCover"],
     "price": 7.80
   },
    {
@@ -61,7 +61,7 @@
     "image": "/images/book8.jpg",
     "title": "Три товарища",
     "description": "something about book",
-    "availableCovers": ["hardCover", "papyCover"],
+    "cover": "hardcover",
     "price": 7.20
   },
    {
@@ -69,7 +69,7 @@
     "image": "/images/book9.jpg",
     "title": "Триумфальная арка",
     "description": "something about book",
-    "availableCovers": ["hardCover", "papyCover"],
+    "cover": "papercover",
     "price": 8.95
   }
 ]

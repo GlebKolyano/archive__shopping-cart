@@ -143,3 +143,30 @@ h2 {
   justify-content: center;
   padding: 10px 5px;
 }
+/* filter block */
+.filter__wrapper {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  align-items: center;
+  column-gap: 30px;
+}
+.filter__sort {
+  display: flex;
+  column-gap: 30px;
+}
+.filter__count {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: rgb(30, 67, 71);
+}
+.filter__price {
+}
+.filter__cover {
+}
+select {
+  padding: 5px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}

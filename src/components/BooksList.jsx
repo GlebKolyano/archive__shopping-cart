@@ -1,11 +1,12 @@
+import { useEffect, useState } from "react"
 import data from "../data.json"
 
-const BookList = () => {
-  const products = data.products
+const BookList = ({books}) => {
+
+  
   return (
-      <ul className="books__wrapper">{products.map(book => 
+      <ul className="books__wrapper">{books.map(book => 
         <li key={book._id} className="book__item"><a href={"#"+ book._id}>
-            
             <div>
                 <img className="book__cover" src={book.image} alt={book.title}/>
             </div>
