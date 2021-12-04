@@ -72,15 +72,74 @@ li {
   flex-wrap: wrap;
   justify-content: center;
   padding: 0;
+  column-gap: 10px;
+  row-gap: 10px;
 }
 .book__item {
-  flex: 0 1 300px;
-  border: 1px solid #000;
+  flex: 0 1 15rem;
+  transition: all 0.2s;
+  padding: 10px 0;
 }
 .book__item > a {
   color: rgb(39, 39, 39);
 }
+.book__item:hover {
+  box-shadow: 0px 4px 10px 0.1px rgb(185, 185, 185);
+  transform: scale(1.05);
+  transition: all 0.4s;
+}
+/* book item design */
+h2 {
+  line-height: 0;
+  font-size: 0.9rem;
+  letter-spacing: 0.03rem;
+  font-weight: bold;
+}
 .book__cover {
   width: 100%;
   height: 100%;
+}
+
+.book__info {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px 0 20px;
+}
+.book__title {
+  color: rgb(99, 46, 0);
+  transition: color 0.5s;
+}
+.book__title:hover {
+  color: sandybrown;
+}
+.book__price-wrapper {
+  display: flex;
+  font-display: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.book__price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  transform: scaleY(0.9);
+}
+.book__button {
+}
+.button {
+  cursor: pointer;
+  padding: 5px 15px;
+  background-color: rgb(62, 192, 160);
+  border: 0px solid #000;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: rgb(26, 25, 25);
+}
+.button:hover {
+  background-color: rgb(81, 221, 202);
+  transition: background-color 0.5s;
+}
+.main__cart {
+  display: flex;
+  justify-content: center;
+  padding: 10px 5px;
 }

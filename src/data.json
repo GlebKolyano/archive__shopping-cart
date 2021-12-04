@@ -30,7 +30,7 @@
     "title": "О дивный новый мир",
     "description": "something about book",
     "availableCovers": ["hardCover", "papyCover"],
-    "price": 7
+    "price": 7.90
   },
    {
     "_id": "book5",
@@ -46,7 +46,7 @@
     "title": "Портрет Дориана Грея",
     "description": "something about book",
     "availableCovers": ["hardCover", "papyCover"],
-    "price": 7.25
+    "price": 10.25
   },
    {
     "_id": "book7",
@@ -70,7 +70,7 @@
     "title": "Триумфальная арка",
     "description": "something about book",
     "availableCovers": ["hardCover", "papyCover"],
-    "price": 6.95
+    "price": 8.95
   }
 ]
 }
