@@ -7,6 +7,7 @@ import data from "./data.json"
 import FilterClass from './components/utils/SortedAndFilter';
 import { useDispatch, useSelector } from 'react-redux';
 import { actionGetBooks } from './store/action-creators-types/actionCreators';
+import CartList from './components/CartList';
 
 function App() {
   const dispatch = useDispatch()
@@ -36,9 +37,7 @@ function App() {
             <Filter books={sortedAndFilterBooks} filter={filter} setFilter={setFilter} />
             <BookList books={sortedAndFilterBooks}/>
           </div>
-          <div className="main__cart">В корзине 0 товаров
-            
-          </div>
+          <CartList />
         </div>
       </main>
       <footer className="footer">Все права защищены.</footer>

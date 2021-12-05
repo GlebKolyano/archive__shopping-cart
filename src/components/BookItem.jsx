@@ -1,6 +1,10 @@
+import { useSelector } from "react-redux"
+import { actionAddItemToCart } from "../store/action-creators-types/actionCreators"
+import { store } from "../store/store"
 
 
 const BookItem = ({book}) => {
+  
   return (
         <li className="book__item">
           <a onClick={() => console.log('item')} href={"#"+ book._id}>
@@ -11,8 +15,12 @@ const BookItem = ({book}) => {
               <h2 className="book__title">{book.title}</h2>
               <div div className="book__price-wrapper">
                 <div className="book__price" >{book.price} р.</div>
-                <button onClick={(e) => {e.stopPropagation()
-                console.log("button")}} className="book__button button">В корзину</button>
+                <button 
+                        onClick={(e) => {
+                          e.stopPropagation()
+                          store.dispatch(actionAddItemToCart(book))
+                        }}      
+                        className="book__button button">В корзину</button>
               </div>
             </div>
           </a>
