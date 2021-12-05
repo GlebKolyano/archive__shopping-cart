@@ -4,21 +4,23 @@ import {
   CSSTransition,
   TransitionGroup,
 } from 'react-transition-group';
+import { countProducts } from "./utils/countProducts";
+
 
 const CartList = () => {
   const dispatch = useDispatch()
   const cartItems = useSelector(state => state.cartRed.cartItems)
-
+  let count = countProducts(cartItems)
   return (
     <div className="main__cart">
-      <div>В корзине {cartItems.length} товаров</div>
+      <div>В корзине {count} товаров</div>
       <div className="cart__wrapper">
         <TransitionGroup component={null}>
-          {cartItems.map(item =>
+          {cartItems.map((item, index) =>
             <CSSTransition
-              key={item._id + 1}
+              key = {index}
               timeout={500}
-              classNames="cartItem"
+              className="cartItem"
             >
                <CartItem item={item} />
             </CSSTransition>

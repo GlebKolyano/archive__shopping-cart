@@ -6,7 +6,8 @@
     "title": "1984",
     "description": "something about book",
     "cover": "papercover",
-    "price": 7.25
+    "price": 7.25,
+    "count": 1
   },
    {
     "_id": "book2",
@@ -14,7 +15,8 @@
     "title": "Убить пересмешника",
     "description": "something about book",
     "cover": "hardcover",
-    "price": 7.15
+    "price": 7.15,
+    "count": 1
   },
    {
     "_id": "book3",
@@ -22,7 +24,8 @@
     "title": "Грозовой перевал",
     "description": "something about book",
     "cover": "papercover",
-    "price": 7.55
+    "price": 7.55,
+    "count": 1
   },
    {
     "_id": "book4",
@@ -30,7 +33,8 @@
     "title": "О дивный новый мир",
     "description": "something about book",
     "cover": "papercover",
-    "price": 7.90
+    "price": 7.90,
+    "count": 1
   },
    {
     "_id": "book5",
@@ -38,7 +42,8 @@
     "title": "Велики Гэтсби",
     "description": "something about book",
     "cover": "papercover",
-    "price": 7.35
+    "price": 7.35,
+    "count": 1
   },
    {
     "_id": "book6",
@@ -46,7 +51,8 @@
     "title": "Портрет Дориана Грея",
     "description": "something about book",
     "cover": "papercover",
-    "price": 10.25
+    "price": 10.25,
+    "count": 1
   },
    {
     "_id": "book7",
@@ -54,7 +60,8 @@
     "title": "Повелитель мух",
     "description": "something about book",
     "cover": ["hardCover"],
-    "price": 7.80
+    "price": 7.80,
+    "count": 1
   },
    {
     "_id": "book8",
@@ -62,7 +69,8 @@
     "title": "Три товарища",
     "description": "something about book",
     "cover": "hardcover",
-    "price": 7.20
+    "price": 7.20,
+    "count": 1
   },
    {
     "_id": "book9",
@@ -70,7 +78,8 @@
     "title": "Триумфальная арка",
     "description": "something about book",
     "cover": "papercover",
-    "price": 8.95
+    "price": 8.95,
+    "count": 1
   }
 ]
 }
