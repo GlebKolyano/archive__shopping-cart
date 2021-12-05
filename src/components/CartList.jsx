@@ -8,7 +8,6 @@ import { countProducts } from "./utils/countProducts";
 
 
 const CartList = () => {
-  const dispatch = useDispatch()
   const cartItems = useSelector(state => state.cartRed.cartItems)
   let count = countProducts(cartItems)
   return (
@@ -16,11 +15,11 @@ const CartList = () => {
       <div>В корзине {count} товаров</div>
       <div className="cart__wrapper">
         <TransitionGroup component={null}>
-          {cartItems.map((item, index) =>
-            <CSSTransition
-              key = {index}
+          {cartItems.map(item =>
+             <CSSTransition
+              key={item._id}
               timeout={500}
-              className="cartItem"
+              classNames="cartItemTransition"
             >
                <CartItem item={item} />
             </CSSTransition>

@@ -13,7 +13,7 @@ const CartItem = ({item}) => {
 
         <div className="cart__btns">
           <button className="cart__button button">Заказать</button>
-          <button className="cart__button-delete"><i class="fa fa-trash" aria-hidden="true"></i></button>
+          <button className="cart__button-delete"><i className="fa fa-trash" aria-hidden="true"></i></button>
         </div>
         
       </div>
