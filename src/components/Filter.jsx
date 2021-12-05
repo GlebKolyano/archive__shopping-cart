@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import data from "../data.json"
+import Input from "./UI/input/Input"
 
 const Filter = ({books, filter, setFilter}) => {
   const [count, setCount] = useState(0)
@@ -27,9 +28,8 @@ const Filter = ({books, filter, setFilter}) => {
         </div>
         </div>
         <div className="filter__query">
-          <input value={filter.query} onChange={(e) => {
-            setFilter({...filter, query: e.target.value})
-            console.log(filter.query)}} type="text" placeholder="Поиск"/>
+          <Input value={filter.query} onChange={(e) => {
+            setFilter({...filter, query: e.target.value})}} type="text" placeholder="Поиск"/>
         </div>
       </div>
     </div>
