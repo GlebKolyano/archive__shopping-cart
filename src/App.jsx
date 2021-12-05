@@ -26,7 +26,7 @@ function App() {
   }, [filter.query, sortedBooksCover])
 
 
-
+  
   return (
     <div className="app-wrapper">
       <header className="header"><a href="/">Книги для каждого</a></header>
@@ -36,7 +36,9 @@ function App() {
             <Filter books={sortedAndFilterBooks} filter={filter} setFilter={setFilter} />
             <BookList books={sortedAndFilterBooks}/>
           </div>
-          <div className="main__cart">В корзине 0 товаров</div>
+          <div className="main__cart">В корзине 0 товаров
+            
+          </div>
         </div>
       </main>
       <footer className="footer">Все права защищены.</footer>
