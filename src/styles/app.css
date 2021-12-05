@@ -191,6 +191,26 @@ select {
   transform: translateY(70px);
   transition: all 500ms ease-in;
 }
+/* transition cart items group */
+
+.cartItem-enter {
+  opacity: 0.8;
+  transform: translateY(70px);
+}
+.cartItem-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 500ms ease-in;
+}
+.cartItem-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+.cartItem-exit-active {
+  opacity: 0.5;
+  transform: translateY(70px);
+  transition: all 500ms ease-in;
+}
 /* styles for cart items */
 .main__cart {
   display: flex;
@@ -223,4 +243,26 @@ select {
 }
 .cart__price {
   color: crimson;
+}
+.cart__btns {
+  display: flex;
+  column-gap: 5px;
+}
+.cart__button-delete {
+  cursor: pointer;
+  padding: 5px 15px;
+  background-color: rgb(204, 60, 60);
+  border: 0px solid #000;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: center;
+  color: white;
+  min-width: 40px;
+  max-width: 40px;
+}
+.cart__button-delete:hover {
+  background-color: rgb(236, 79, 79);
+}
+.fa-trash {
+  transform: translateX(-15%);
 }

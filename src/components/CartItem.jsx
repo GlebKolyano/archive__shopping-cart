@@ -10,7 +10,11 @@ const CartItem = ({item}) => {
       <div className="cart__info">
         <div className="cart__title">{item.title}</div>
         <div className="cart__price">{item.price} р.</div>
-        <button className="cart__button button">Заказать</button>
+        <div className="cart__btns">
+          <button className="cart__button button">Заказать</button>
+          <button className="cart__button-delete"><i class="fa fa-trash" aria-hidden="true"></i></button>
+        </div>
+        
       </div>
       
     </div>
