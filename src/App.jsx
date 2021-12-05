@@ -4,6 +4,7 @@ import BookList from './components/BooksList';
 import Filter from './components/Filter';
 import "./styles/app.css"
 import data from "./data.json"
+import FilterClass from './components/utils/SortedAndFilter';
 
 function App() {
   const [books, setBooks] = useState([])
@@ -11,25 +12,11 @@ function App() {
   const [filter, setFilter] = useState({sort: {price: '', cover: ''}, query: ''})
   
   const sortedBooksPrice = useMemo(() => {
-    if (filter.sort.price === "lowPrice") {    
-      return [...books].sort((a, b) => a.price-b.price)
-     
-    } else if (filter.sort.price === "highPrice") {
-      return [...books].sort((a, b) => b.price-a.price)
-    } 
-      return books
-    
+    return FilterClass.getSortedPrice(books, filter.sort.price)
   }, [filter.sort.price, books])
 
   const sortedBooksCover = useMemo(() => {
-     if (filter.sort.cover === "hardcover") {    
-      return sortedBooksPrice.filter(book => book.cover === "hardcover")
-     
-    } else if (filter.sort.cover === "papercover") {
-      return sortedBooksPrice.filter(book => book.cover === "papercover")
-    } 
-      return sortedBooksPrice
-    
+    return FilterClass.getSortedCover(sortedBooksPrice, filter.sort.cover)
   }, [filter.sort.cover, sortedBooksPrice])
 
   const sortedAndFilterBooks = useMemo(() => {

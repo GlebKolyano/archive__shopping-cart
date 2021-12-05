@@ -1,2 +1,5 @@
 .Select {
+  border-radius: 5px;
+  border: 1px solid rgb(49, 151, 134);
+  padding: 5px;
 }
