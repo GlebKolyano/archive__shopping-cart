@@ -5,12 +5,22 @@ import {
   TransitionGroup,
 } from 'react-transition-group';
 import { countProducts, countTotal } from "./utils/countSomething";
+import { useState } from "react";
 
 
 const CartList = () => {
+  const [formOrder, setFormOrder] = useState(false)
+  const [formObj, setFormObj] = useState({})
   const cartItems = useSelector(state => state.cartRed.cartItems)
   let count = countProducts(cartItems)
-
+  // handlers
+  const sendOrder = (e) => {
+    e.preventDefault()
+    setFormOrder(false)
+    console.log(formObj)
+    console.log(cartItems)
+  }
+  const handleInput = (e) => {setFormObj({...formObj, [e.target.name]: e.target.value})}
   
 
   return (
@@ -29,7 +39,25 @@ const CartList = () => {
           )}
         </TransitionGroup>
       </div> 
-    {cartItems.length > 0 ? <div>Итого: {countTotal(cartItems)} р.</div> : null}  
+    {cartItems.length > 0 &&
+      <div className="cart__order">
+        <div>Итого: {countTotal(cartItems)} р.</div>
+        <div>
+          <button onClick={() => setFormOrder(true)} className="button__order button">Заказать</button>
+        </div>
+      </div> 
+    }
+    {formOrder &&
+      <div className="form-order-container">
+        <form  className="form-order" onSubmit={sendOrder} >
+          <input onChange={handleInput} type="text" name="name" placeholder="Имя" required/>
+          <input onChange={handleInput} type="tel" name="phone" placeholder="Телефон" required/>
+          <input onChange={handleInput} type="email" name="email" placeholder="Email" required/>
+          <input onChange={handleInput} type="text" name="address" placeholder="Адрес" required/>
+          <button className="button"  type="submit" >Отправить</button>
+        </form>
+      </div>
+   }
     </div>
     
   )

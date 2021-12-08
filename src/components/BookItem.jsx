@@ -9,6 +9,7 @@ import CartList from "./CartList"
 const BookItem = ({book}) => {
   const cartItems = useSelector(state => state.cartRed.cartItems)
   const dispatch = useDispatch()
+  
 
   const addBookInCartItems = (product) => {
     
@@ -22,8 +23,7 @@ const BookItem = ({book}) => {
       if (!alreadyInCart) {
         dispatch(actionAddItemToCart(product))
       }
-    
-  
+    localStorage.setItem('cartItems', JSON.stringify(store.getState().cartRed.cartItems))
   }
 
   return (

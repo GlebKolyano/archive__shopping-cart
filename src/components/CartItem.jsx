@@ -1,4 +1,4 @@
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { actionDeleteItemFromCart, actionReloadCount } from "../store/action-creators-types/actionCreators"
 import { store } from "../store/store"
 
@@ -6,13 +6,17 @@ import { store } from "../store/store"
 
 const CartItem = ({item}) => {
   const dispatch = useDispatch()
+  const cartItems = useSelector(state => state.cartRed.cartItems)
+
   const deleteFromCart = (product) => {
     if (product.count > 1) {
       product.count--
       dispatch(actionReloadCount())
-    } else {
-      dispatch(actionDeleteItemFromCart(product))
+    } else { 
+      let filterArray = cartItems.filter((el) => el._id !== product._id)
+      dispatch(actionDeleteItemFromCart(filterArray)) 
     }
+    localStorage.setItem('cartItems', JSON.stringify(store.getState().cartRed.cartItems))
   }
 
   return (
@@ -23,17 +27,11 @@ const CartItem = ({item}) => {
       <div className="cart__info">
         <div className="cart__title">{item.title}</div>
         <div className="cart__price">{item.price} р.   <span style={{color: "black", fontWeight: "bold"}}>x {item.count}</span></div>
-        
-        <div className="cart__btns">
-          <button className="cart__button button">Заказать</button>
-          <button onClick={() => deleteFromCart(item)}                  
+        <button onClick={() => deleteFromCart(item)}                  
                   className="cart__button-delete">
-                    <i className="fa fa-trash" aria-hidden="true"></i>
-          </button>
-        </div>
-        
-      </div>
-      
+                     <i className="fa fa-trash" aria-hidden="true"></i>
+          </button>    
+      </div>  
     </div>
   )
 }

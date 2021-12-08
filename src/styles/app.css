@@ -195,7 +195,7 @@ select {
 
 .cartItemTransition-enter {
   opacity: 0.8;
-  transform: translateY(70px);
+  transform: translateX(-70px);
 }
 .cartItemTransition-enter-active {
   opacity: 1;
@@ -208,7 +208,7 @@ select {
 }
 .cartItemTransition-exit-active {
   opacity: 0.5;
-  transform: translateY(70px);
+  transform: translateY(-70px);
   transition: all 500ms ease-in;
 }
 /* styles for cart items */
@@ -265,4 +265,31 @@ select {
 }
 .fa-trash {
   transform: translateX(-15%);
+}
+/* form order css */
+.form-order-container {
+  margin-top: 20px;
+  background-color: rgba(94, 155, 139, 0.322);
+  border-radius: 5px;
+  padding: 10px;
+  width: 90%;
+}
+.form-order {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+input:active,
+:hover,
+:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+.form-order input {
+  height: 1rem;
+  border-radius: 5px;
+  border: 1px solid rgb(49, 151, 134);
+  padding: 5px;
+  width: 300px;
+  margin-bottom: 10px;
 }
