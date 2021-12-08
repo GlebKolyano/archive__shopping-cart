@@ -30,7 +30,7 @@ function App() {
   
   return (
     <div className="app-wrapper">
-      <header className="header"><a href="/">Книги для каждого</a></header>
+      <header className="header"><a href="/"><img src="/images/books for everyone_free-file (1).png" alt="" /></a></header>
       <main className="main">
         <div className="main__wrapper">
           <div className="main__content">

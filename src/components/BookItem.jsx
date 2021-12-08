@@ -20,7 +20,7 @@ const BookItem = ({book}) => {
         alreadyInCart = true
       } }
       if (!alreadyInCart) {
-        dispatch(actionAddItemToCart({...product, count: 1}))
+        dispatch(actionAddItemToCart(product))
       }
     
   
