@@ -8,6 +8,8 @@ import FilterClass from './components/utils/SortedAndFilter';
 import { useDispatch, useSelector } from 'react-redux';
 import { actionGetBooks } from './store/action-creators-types/actionCreators';
 import CartList from './components/CartList';
+import addClassHandlers from './components/utils/addClassHandlers';
+import toggleClassHandlers from './components/utils/addClassHandlers';
 
 function App() {
   const dispatch = useDispatch()
@@ -27,12 +29,12 @@ function App() {
   }, [filter.query, sortedBooksCover])
 
 
-  
+  const mainCart = document.body.querySelector('.main__cart')
   return (
     <div className="app-wrapper">
       <header className="header">
         <a href="/"><img src="/images/books for everyone_free-file (1).png" alt="" /></a>
-        <button onClick={() => localStorage.clear()}>очисить</button>
+        <a onClick={() => {toggleClassHandlers(mainCart, "open")}} href="#">открыть корзину</a>
       </header>
       <main className="main">
         <div className="main__wrapper">

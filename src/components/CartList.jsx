@@ -6,6 +6,8 @@ import {
 } from 'react-transition-group';
 import { countProducts, countTotal } from "./utils/countSomething";
 import { useState } from "react";
+import { store } from "../store/store";
+import { actionReloadCount } from "../store/action-creators-types/actionCreators";
 
 
 const CartList = () => {
@@ -17,8 +19,7 @@ const CartList = () => {
   const sendOrder = (e) => {
     e.preventDefault()
     setFormOrder(false)
-    console.log(formObj)
-    console.log(cartItems)
+    localStorage.clear()
   }
   const handleInput = (e) => {setFormObj({...formObj, [e.target.name]: e.target.value})}
   
