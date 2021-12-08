@@ -308,3 +308,41 @@ input:active,
   width: 300px;
   margin-bottom: 10px;
 }
+
+/* modal book */
+.modal-container {
+  min-height: 80vh;
+  max-width: 60vw;
+  margin: 0 auto;
+  border: 5px solid rgba(130, 182, 152, 0.082);
+  background-color: rgb(255, 255, 255);
+  margin-top: 5vh;
+  padding: 10px;
+}
+.modal-book {
+  max-width: 100%;
+  max-height: 100%;
+  color: black;
+  display: flex;
+}
+
+.modal__image {
+}
+.modal-info {
+  display: flex;
+  flex-direction: column;
+}
+.modal__title {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.116);
+}
+.modal__description {
+}
+
+.modal__button {
+}
+.close-modal {
+  background-color: rgb(253, 60, 60);
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
