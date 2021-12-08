@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { actionAddItemToCart, actionReload, actionUpCount } from "../store/action-creators-types/actionCreators"
+import { actionAddItemToCart, actionReload, actionReloadCount, actionUpCount } from "../store/action-creators-types/actionCreators"
 import { store } from "../store/store"
 import CartList from "./CartList"
 
@@ -16,7 +16,7 @@ const BookItem = ({book}) => {
     for (let item of cartItems) {
       if (item.title === product.title) {
         item.count++
-        dispatch(actionUpCount())
+        dispatch(actionReloadCount())
         alreadyInCart = true
       } }
       if (!alreadyInCart) {

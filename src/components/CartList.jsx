@@ -4,12 +4,15 @@ import {
   CSSTransition,
   TransitionGroup,
 } from 'react-transition-group';
-import { countProducts } from "./utils/countProducts";
+import { countProducts, countTotal } from "./utils/countSomething";
 
 
 const CartList = () => {
   const cartItems = useSelector(state => state.cartRed.cartItems)
   let count = countProducts(cartItems)
+
+  
+
   return (
     <div className="main__cart">
       <div>В корзине {count} товаров</div>
@@ -26,7 +29,9 @@ const CartList = () => {
           )}
         </TransitionGroup>
       </div> 
+    {cartItems.length > 0 ? <div>Итого: {countTotal(cartItems)} р.</div> : null}  
     </div>
+    
   )
 }
 
