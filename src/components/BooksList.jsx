@@ -1,28 +1,17 @@
-import { useEffect, useState } from "react"
-import data from "../data.json"
 import BookItem from "./BookItem"
-import {
-  CSSTransition,
-  TransitionGroup,
-} from 'react-transition-group';
+import Fade from "react-reveal/Fade"
 
 const BookList = ({books}) => {
-
   
   return (
-      <ul className="books__wrapper">
-        <TransitionGroup component={null}>
-        {books.map(book => 
-          <CSSTransition
-              key={book._id}
-              timeout={500}
-              classNames="book"
-            >
-            <BookItem  book={book}/>
-          </CSSTransition>
-         )}
-        </TransitionGroup>
-      </ul>
+    <div>
+      <Fade left cascade >
+        <ul className="books__wrapper">
+          {books.map(book =>  
+            <li className="book__item"> <BookItem  book={book}/> </li> )} 
+        </ul>
+      </Fade>
+    </div>
   )
 }
 

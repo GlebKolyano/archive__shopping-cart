@@ -6,9 +6,7 @@ import {
 } from 'react-transition-group';
 import { countProducts, countTotal } from "./utils/countSomething";
 import { useState } from "react";
-import { store } from "../store/store";
-import { actionReloadCount } from "../store/action-creators-types/actionCreators";
-
+import Fade from "react-reveal/Fade"
 
 const CartList = () => {
   const [formOrder, setFormOrder] = useState(false)
@@ -49,6 +47,7 @@ const CartList = () => {
       </div> 
     }
     {formOrder &&
+    <Fade right cascade>
       <div className="form-order-container">
         <form  className="form-order" onSubmit={sendOrder} >
           <input onChange={handleInput} type="text" name="name" placeholder="Имя" required/>
@@ -58,6 +57,7 @@ const CartList = () => {
           <button className="button"  type="submit" >Отправить</button>
         </form>
       </div>
+    </Fade>
    }
     </div>
     

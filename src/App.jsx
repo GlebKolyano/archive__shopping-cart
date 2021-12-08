@@ -11,6 +11,7 @@ import CartList from './components/CartList';
 import addClassHandlers from './components/utils/addClassHandlers';
 import toggleClassHandlers from './components/utils/addClassHandlers';
 
+
 function App() {
   const dispatch = useDispatch()
   const [filter, setFilter] = useState({sort: {price: '', cover: ''}, query: ''})

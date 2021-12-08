@@ -27,8 +27,7 @@ const BookItem = ({book}) => {
   }
 
   return (
-        <li className="book__item">
-          <a onClick={() => console.log('item')} href={"#"+ book._id}>
+        <a onClick={() => console.log('item')} href={"#"+ book._id}>
             <div>
                 <img className="book__cover" src={book.image} alt={book.title}/>
             </div>
@@ -43,7 +42,6 @@ const BookItem = ({book}) => {
               </div>
             </div>
           </a>
-        </li> 
   )
 }
 

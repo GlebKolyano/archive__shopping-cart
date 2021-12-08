@@ -284,16 +284,15 @@ select {
 }
 /* form order css */
 .form-order-container {
-  margin-top: 20px;
-  background-color: rgba(94, 155, 139, 0.322);
-  border-radius: 5px;
-  padding: 10px;
-  width: 90%;
 }
 .form-order {
+  margin-top: 20px;
+  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: rgba(94, 155, 139, 0.322);
+  padding: 15px;
 }
 input:active,
 :hover,
