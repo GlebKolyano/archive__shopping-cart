@@ -51,7 +51,7 @@ const BookList = ({books}) => {
         <div>
           <button className="close-modal button" onClick={() => closeModal()}>Назад</button>
           <div className="modal-book">
-            <div><img className="modal__image" src={modal.image} alt="" /></div>
+            <div className="modal-img-wrapper"><img className="modal__image" src={modal.image} alt="" /></div>
             <div className="modal-info">
               <h1 className="modal__title">{modal.title}</h1>
               <h1>Описание</h1>
