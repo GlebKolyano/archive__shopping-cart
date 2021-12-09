@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import data from "../data.json"
 import Input from "./UI/input/Input"
 import Select from "./UI/select/Select"
+import toggleClassHandlers from "./utils/addClassHandlers"
 
 const Filter = ({books, filter, setFilter}) => {
   const [count, setCount] = useState(0)
@@ -10,9 +11,10 @@ const Filter = ({books, filter, setFilter}) => {
   }, [books])
   return (
     <div className="Filter">
+      <div  onClick={() => toggleClassHandlers(document.body.querySelector('.filter__wrapper'), "open")}><i class="fa fa-sliders" aria-hidden="true"></i></div>
       <div className="filter__wrapper">
         <div className="filter__sort">
-             <div className="filter__count">Количество книг: <span style={{fontSize: "20px"}}>{count} </span></div>
+             
         <div className="filter__price">
           <Select defaultValue="Сортировка по цене" 
                   value={filter.sort.price} 

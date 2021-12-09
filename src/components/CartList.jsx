@@ -18,6 +18,7 @@ const CartList = () => {
     e.preventDefault()
     setFormOrder(false)
     localStorage.clear()
+    window.location.reload()
   }
   const handleInput = (e) => {setFormObj({...formObj, [e.target.name]: e.target.value})}
   
