@@ -42,7 +42,7 @@ const BookList = ({books}) => {
       <Fade left cascade >
         <ul className="books__wrapper">
           {books.map(book =>  
-            <li className="book__item"> <BookItem addToCart={addBookInCartItems} book={book} openModal={openModal}/> </li> )} 
+            <li key={book.title} className="book__item"> <BookItem addToCart={addBookInCartItems} book={book} openModal={openModal}/> </li> )} 
         </ul>
       </Fade>
       {modal && 

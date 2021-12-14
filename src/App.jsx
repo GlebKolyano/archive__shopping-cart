@@ -35,7 +35,7 @@ function App() {
     <div className="app-wrapper">
       <header className="header">
         <a href="/"><img className="header__logo" src="/images/books for everyone_free-file (1).png" alt="" /></a>
-        <a class="fa fa-shopping-cart" aria-hidden="true" onClick={() => {toggleClassHandlers(mainCart, "open")}} href="#"></a>
+        <a className="fa fa-shopping-cart" aria-hidden="true" onClick={() => {toggleClassHandlers(mainCart, "open")}} href="#"></a>
       </header>
       <main className="main">
         <div className="main__wrapper">

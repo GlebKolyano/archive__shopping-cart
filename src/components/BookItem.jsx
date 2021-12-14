@@ -14,7 +14,7 @@ const BookItem = ({book, openModal, addToCart}) => {
             </div>
             <div className="book__info">
               <h2 className="book__title">{book.title}</h2>
-              <div div className="book__price-wrapper">
+              <div className="book__price-wrapper">
                 <div className="book__price" >{book.price} р.</div>
                 <button 
                   onClick={(e) => {

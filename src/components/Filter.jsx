@@ -11,7 +11,7 @@ const Filter = ({books, filter, setFilter}) => {
   }, [books])
   return (
     <div className="Filter">
-      <div  onClick={() => toggleClassHandlers(document.body.querySelector('.filter__wrapper'), "open")}><i class="fa fa-sliders" aria-hidden="true"></i></div>
+      <div  onClick={() => toggleClassHandlers(document.body.querySelector('.filter__wrapper'), "open")}><i className="fa fa-sliders" aria-hidden="true"></i></div>
       <div className="filter__wrapper">
         <div className="filter__sort">
              
